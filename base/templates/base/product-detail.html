@@ -1,0 +1,128 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/product-detail.css' %}">
+{% endblock link %}
+
+
+
+{% block content %}
+
+  <section class="shop_section" style="margin-top: 15vh;">
+    
+    <div class="container">
+      <a id="back-to-shop-btn" class="btn btn-outline-dark" style="margin-top: 20px;">&#x2190; Go Back</a>
+        <div class="col-sm-6 col-md-12 col-lg-12 detail-card">
+            <div class="product-card">
+              <div class="product-img">
+                <img src="{{product.image.url}}" alt="">
+              </div>
+              <div class="product-detail">
+                <h4>{{product.name}}</h4>
+                <span class="product-price">GH&#8373; {{product.price}}</span>
+                <div class="description">
+                    <span>Description</span>
+                    <p>{{product.description}}</p>
+                </div>
+
+              </div>
+            </div>
+            <div class="right-section">
+              <div class="action-btns">
+                <a href="#" class="btn update-cart" data-product="{{product.id}}" data-action="add">Add to Cart</a>
+                <a href="#" class="btn buy-now" data-product="{{product.id}}" data-action="add">Buy</a>
+              </div>
+              <div class="reviews">
+                <h4>Product Reviews</h4>
+                <div class="review">
+                  <div class="buyer-info">
+                    <div class="buyer-img">
+                      <img src="{% static 'images/watch.jpg' %}" alt="">
+                    </div>
+                    <div class="buyer-extra">
+                      <small>Jameson 
+                        <div class="ratings">
+                          <div class="fa fa-star"></div>
+                          <div class="fa fa-star"></div>
+                          <div class="fa fa-star"></div>
+                          <div class="fa fa-star"></div>
+                          <div class="fa fa-star"></div>
+                        </div>
+                      </small>
+                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus quos, nemo labore iste fugiat culpa facilis ut deleniti explicabo sapiente!</p>
+
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="review">
+                  <div class="buyer-info">
+                    <div class="buyer-img">
+                      <img src="{% static 'images/watch.jpg' %}" alt="">
+                    </div>
+                    <div class="buyer-extra">
+                      <small>Jameson 
+                        <div class="ratings">
+                          <div class="fa fa-star"></div>
+                          <div class="fa fa-star"></div>
+                          <div class="fa fa-star"></div>
+                          <div class="fa fa-star"></div>
+                          <div class="fa fa-star"></div>
+                        </div>
+                      </small>
+                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus quos, nemo labore iste fugiat culpa facilis ut deleniti explicabo sapiente!</p>
+
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="review">
+                  <div class="buyer-info">
+                    <div class="buyer-img">
+                      <img src="{% static 'images/watch.jpg' %}" alt="">
+                    </div>
+                    <div class="buyer-extra">
+                      <small>Jameson 
+                        <div class="ratings">
+                          <div class="fa fa-star"></div>
+                          <div class="fa fa-star"></div>
+                          <div class="fa fa-star"></div>
+                          <div class="fa fa-star"></div>
+                          <div class="fa fa-star"></div>
+                        </div>
+                      </small>
+                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus quos, nemo labore iste fugiat culpa facilis ut deleniti explicabo sapiente!</p>
+
+                    </div>
+                  </div>
+                  
+                </div>
+               
+              </div>
+            </div>
+          </div>
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(document).ready(function () {
+        // Get the previous page URL using document.referrer
+        var previousPage = document.referrer;
+
+        // If the previous page is available and not the same as the current page, update the href attribute
+        if (previousPage && previousPage !== window.location.href) {
+            $("#back-to-shop-btn").attr("href", previousPage);
+        } else {
+            // If there is no previous page or it's the same as the current page, link to the default 'shop' URL
+            $("#back-to-shop-btn").attr("href", "{% url 'shop' %}");
+        }
+    });
+</script>
+{% endblock content %}
+
+  
+
+
+
+ 
