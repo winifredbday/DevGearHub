@@ -796,6 +796,19 @@ a:focus {
 }
 .cart-container{
   margin-top: 20vh;
+
+  .box-element{
+    .btn-outline-dark{
+      color: white;
+      border: 1px solid #109dbd;
+      &:hover{
+        background-color: #109dbd;
+      }
+    }
+    .table{
+      color: white;
+    }
+  }
 }
 .form-field{
   width: 250px;
@@ -1099,7 +1112,7 @@ a:focus {
     background-color: #f9f8f7;
     padding: 25px;
     border-radius: 5px;
-
+    height: 220px;
     .img-box {
       margin-bottom: 15px;
 
@@ -1107,6 +1120,15 @@ a:focus {
         width: 55px;
         height: auto;
         fill: #320b57;
+      }
+    }
+    .detail-box{
+      
+      h5{
+        color: #002029;
+      }
+      p{
+        color: #00303d; 
       }
     }
   }
@@ -1202,20 +1224,22 @@ a:focus {
     padding-left: 25px;
     background-color: transparent;
     outline: none;
-    color: #101010;
+    color: #109dbd;
 
 
     &::placeholder {
-      color: #131313;
+      color: #fff;
     }
 
-    &.message-box {
-      height: 120px;
-    }
+    
   }
-
+  .message-box {
+    height: 120px;
+    color: #002029;
+    padding:10px 25px;
+  }
   button {
-    @include hero_btn($btncolor, $white, 12px, 45px, 0);
+    @include hero_btn(#109dbd, $white, 12px, 45px, 0);
     display: block;
     color: #fff;
     margin: 35px auto 0 auto;
@@ -1236,6 +1260,7 @@ a:focus {
 // client section
 
 .client_section {
+  
   .heading_container {
     margin-bottom: 20px;
   }
@@ -1304,10 +1329,11 @@ a:focus {
 /* info section */
 .info_section {
   position: relative;
-  background-color: #2d2d2d;
+  background-color: $primary;
   color: $white;
   margin: 0 45px 45px;
-
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
   .social_container {
     justify-content: center;
     margin-top: 25px;
@@ -1317,6 +1343,7 @@ a:focus {
       display: flex;
       align-items: center;
       justify-content: center;
+      gap: 1rem;
 
       a {
         margin: 0 10px;
@@ -1326,25 +1353,30 @@ a:focus {
     }
   }
 
-  .info_form {
-    form {
-      input {
-        outline: none;
-        width: 100%;
-        padding: 7px 10px;
-      }
-
-      button {
-        padding: 8px 35px;
-        outline: none;
-        border: none;
-        color: $white;
-        background: $primary;
-        margin-top: 15px;
-        text-transform: uppercase;
-      }
+  .info_container{
+    p{
+      font-size: .9rem;
     }
-
+    .info_form {
+      form {
+        input {
+          outline: none;
+          width: 100%;
+          padding: 7px 10px;
+        }
+  
+        button {
+          padding: 12px 35px;
+          outline: none;
+          border: none;
+          color: $white;
+          background: #109dbd;
+          margin-top: 15px;
+          text-transform: uppercase;
+        }
+      }
+  
+    }
   }
 
   .row>div {
@@ -1421,7 +1453,7 @@ a:focus {
 }
 
 .footer_section a {
-  color: #cbc9c9;
+  color: #109dbd;
 }
 
 /* end footer section*/

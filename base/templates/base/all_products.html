@@ -44,35 +44,35 @@
           All Products
         </h2>
       </div>
-      <!-- Jerseys -->
-      <span class="section-title layout_padding" style="font-weight: bold;">Jerseys</span>
+      <!-- T-Shirts -->
+      <span class="section-title layout_padding" style="font-weight: bold;">T-Shirts</span>
       <hr class="one">
       <hr class="two">
       <div class="row layout_padding-bottom">
-        {% for jersey in jerseys %}
+        {% for tshirt in tshirts %}
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="{% url 'product-detail' jersey.id %}">
+            <a href="{% url 'product-detail' tshirt.id %}">
               <div class="img-box">
-                <img src="{{jersey.image.url}}" alt="">
+                <img src="{{tshirt.image.url}}" alt="">
               </div>
               <div class="detail-box">
                 <h6>
-                  {{jersey.name}}
+                  {{tshirt.name}}
                 </h6>
                 <br>
                 <h6>
                   
                   <span>
-                    GH&#8373; {{jersey.price}}
+                    GH&#8373; {{tshirt.price}}
                   </span>
                 </h6>
               </div>
               
             </a>
             <div class="product-action">
-              <a href="#" class="btn btn-cart-dark update-cart" data-product="{{jersey.id}}" data-action="add">Add to Cart</a>
-              <a href="#" class="btn btn-cart buy-now" data-product="{{product.id}}" data-action="add">Buy</a>
+              <a href="#" class="btn btn-cart-dark update-cart" data-product="{{tshirt.id}}" data-action="add">Add to Cart</a>
+              <a href="#" class="btn btn-cart buy-now" data-product="{{tshirt.id}}" data-action="add">Buy</a>
             </div>
           </div>
         </div>
@@ -80,35 +80,35 @@
        
       </div>
       
-      <!-- Flowers -->
-      <span class="section-title">Flowers</span>
+      <!-- Hoodies -->
+      <span class="section-title">Hoodies</span>
       <hr class="one">
       <hr class="two">
       <div class="row layout_padding-bottom">
        
-       {% for flower in flowers  %}
+       {% for hoodie in hoodies  %}
        <div class="col-sm-6 col-md-4 col-lg-3">
         <div class="box">
-          <a href="{% url 'product-detail' flower.id %}">
+          <a href="{% url 'product-detail' hoodie.id %}">
             <div class="img-box">
-              <img src="{{flower.image.url}}" alt="">
+              <img src="{{hoodie.image.url}}" alt="">
             </div>
             <div class="detail-box">
               <h6>
-                {{flower.name}}
+                {{hoodie.name}}
               </h6>
               <h6>
               
                 <span>
-                  GH&#8373; {{flower.price}}
+                  GH&#8373; {{hoodie.price}}
                 </span>
               </h6>
             </div>
             
           </a>
           <div class="product-action">
-            <a href="#" class="btn btn-cart-dark update-cart" data-product="{{flower.id}}" data-action="add">Add to Cart</a>
-            <a href="#" class="btn btn-cart buy-now" data-product="{{product.id}}" data-action="add">Buy</a>
+            <a href="#" class="btn btn-cart-dark update-cart" data-product="{{hoodie.id}}" data-action="add">Add to Cart</a>
+            <a href="#" class="btn btn-cart buy-now" data-product="{{hoodie.id}}" data-action="add">Buy</a>
           </div>
         </div>
       </div>
@@ -116,36 +116,36 @@
        
       </div>
 
-      <!-- Watches -->
-      <span class="section-title">Watches</span>
+      <!-- Sweatshirts -->
+      <span class="section-title">Sweatshirts</span>
       <hr class="one">
       <hr class="two">
       <div class="row layout_padding-bottom">
        
        
-        {% for watch in watches %}
+        {% for sweatshirt in sweatshirts %}
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="{% url 'product-detail' watch.id %}">
+            <a href="{% url 'product-detail' sweatshirt.id %}">
               <div class="img-box">
-                <img src="{{watch.image.url}}" alt="">
+                <img src="{{sweatshirt.image.url}}" alt="">
               </div>
               <div class="detail-box">
                 <h6>
-                  {{watch.name}}
+                  {{sweatshirt.name}}
                 </h6>
                 <h6>
                   
                   <span>
-                    GH&#8373; {{watch.price}}
+                    GH&#8373; {{sweatshirt.price}}
                   </span>
                 </h6>
               </div>
               
             </a>
             <div class="product-action">
-              <a href="#" class="btn btn-cart-dark update-cart" data-product="{{watch.id}}" data-action="add">Add to Cart</a>
-              <a href="#" class="btn btn-cart buy-now" data-product="{{product.id}}" data-action="add">Buy</a>
+              <a href="#" class="btn btn-cart-dark update-cart" data-product="{{sweatshirt.id}}" data-action="add">Add to Cart</a>
+              <a href="#" class="btn btn-cart buy-now" data-product="{{sweatshirt.id}}" data-action="add">Buy</a>
             </div>
           </div>
         </div>
@@ -155,34 +155,70 @@
       </div>
       
 
-      <!-- Rings -->
-      <span class="section-title">Casual Wear rings</span>
+      <!-- Mugs -->
+      <span class="section-title">Mugs</span>
       <hr class="one">
       <hr class="two">
       <div class="row layout_padding-bottom">
-        {% for ring in rings %}
+        {% for mug in mugs %}
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="{% url 'product-detail' ring.id %}">
+            <a href="{% url 'product-detail' mug.id %}">
               <div class="img-box">
-                <img src="{{ring.image.url}}" alt="">
+                <img src="{{mug.image.url}}" alt="">
               </div>
               <div class="detail-box">
                 <h6>
-                  {{ring.name}}
+                  {{mug.name}}
                 </h6>
                 <h6>
                   
                   <span>
-                    GH&#8373; {{ring.price}}
+                    GH&#8373; {{mug.price}}
                   </span>
                 </h6>
               </div>
               
             </a>
             <div class="product-action">
-              <a href="#" class="btn btn-cart-dark update-cart" data-product="{{watch.id}}" data-action="add">Add to Cart</a>
-              <a href="#" class="btn btn-cart buy-now" data-product="{{product.id}}" data-action="add">Buy</a>
+              <a href="#" class="btn btn-cart-dark update-cart" data-product="{{mug.id}}" data-action="add">Add to Cart</a>
+              <a href="#" class="btn btn-cart buy-now" data-product="{{mug.id}}" data-action="add">Buy</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+       
+      </div>
+
+
+      <!-- Beanies -->
+      <span class="section-title">Beanies</span>
+      <hr class="one">
+      <hr class="two">
+      <div class="row layout_padding-bottom">
+        {% for beanie in beanies %}
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <a href="{% url 'product-detail' beanie.id %}">
+              <div class="img-box">
+                <img src="{{beanie.image.url}}" alt="">
+              </div>
+              <div class="detail-box">
+                <h6>
+                  {{beanie.name}}
+                </h6>
+                <h6>
+                  
+                  <span>
+                    GH&#8373; {{beanie.price}}
+                  </span>
+                </h6>
+              </div>
+              
+            </a>
+            <div class="product-action">
+              <a href="#" class="btn btn-cart-dark update-cart" data-product="{{beanie.id}}" data-action="add">Add to Cart</a>
+              <a href="#" class="btn btn-cart buy-now" data-product="{{beanie.id}}" data-action="add">Buy</a>
             </div>
           </div>
         </div>

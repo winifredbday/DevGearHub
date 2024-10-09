@@ -118,15 +118,19 @@ def shop(request):
 def all_products(request):
     cart_data = cartData(request)
 
-    jerseys = Product.objects.filter(type="JERSEY")
-    flowers = Product.objects.filter(type="FLOWER")
-    rings = Product.objects.filter(type="RING")
-    watches = Product.objects.filter(type="WATCH")
+    tshirts = Product.objects.filter(type="TSHIRT")
+    hoodies = Product.objects.filter(type="HOODIE")
+    sweatshirts = Product.objects.filter(type="SWEATSHIRT")
+    beanies = Product.objects.filter(type="BEANIE")
+    mugs = Product.objects.filter(type="MUG")
+    hats = Product.objects.filter(type="HAT")
     context = {
-        "jerseys": jerseys,
-        "flowers": flowers,
-        "rings": rings,
-        "watches": watches,
+        "tshirts": tshirts,
+        "hoodies": hoodies,
+        "sweatshirts": sweatshirts,
+        "beanies": beanies,
+        "mugs": mugs,
+        "hats": hats,
         "cartItems": cart_data['cartItems']
     }
     return render(request, "base/all_products.html", context)

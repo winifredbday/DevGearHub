@@ -11,16 +11,20 @@ class Customer(models.Model):
         return self.name
     
 class Product(models.Model):
-    JERSEY = 'JERSEY'
-    RING = 'RING'
-    FLOWER = 'FLOWER'
-    WATCH = 'WATCH'
+    TSHIRT = 'TSHIRT'
+    HOODIE = 'HOODIE'
+    SWEATSHIRT = 'SWEATSHIRT'
+    BEANIE = 'BEANIE'
+    MUG = 'MUG'
+    HAT = 'HAT'
 
     PRODUCT_CHOICES =(
-        (JERSEY, 'JERSEY'),
-        (RING, 'RING'),
-        (FLOWER, 'FLOWER'),
-        (WATCH, 'WATCH')
+        (TSHIRT, 'TSHIRT'),
+        (HOODIE, 'HOODIE'),
+        (SWEATSHIRT, 'SWEATSHIRT'),
+        (BEANIE, 'BEANIE'),
+        (MUG, 'MUG'),
+        (HAT, 'HAT'),
     )
     name = models.CharField(max_length=100)
     price = models.IntegerField()
