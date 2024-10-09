@@ -32,8 +32,8 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', '3665-102-176-94-111.ngrok-free.app']
-CSRF_TRUSTED_ORIGINS = ['https://giftos.vercel.app', "https://3665-102-176-94-111.ngrok-free.app"]
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', 'devgearhub.up.railway.app', '3665-102-176-94-111.ngrok-free.app']
+CSRF_TRUSTED_ORIGINS = ['https://giftos.vercel.app', "https://devgearhub.up.railway.app", "https://3665-102-176-94-111.ngrok-free.app"]
 
 
 # Application definition
