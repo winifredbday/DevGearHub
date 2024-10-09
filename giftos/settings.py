@@ -80,7 +80,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'giftos.wsgi.app'
+WSGI_APPLICATION = 'giftos.wsgi.application'
 
 
 # Database
