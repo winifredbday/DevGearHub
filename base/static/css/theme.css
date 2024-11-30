@@ -204,6 +204,7 @@ a:focus {
   margin: 20px 0;
   padding: 0;
   box-sizing: border-box;
+  border: 2px solid red;
 }
 .navbar-brand span {
   font-size: 28px;
