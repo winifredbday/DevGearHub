@@ -320,6 +320,11 @@ color: #db4f66;
 display: flex;
 }
 
+@media screen and (min-width: 769px) {
+  #navbarSupportedContent {
+    display: flex;
+  }
+}
 @media screen and (max-width: 768px) {
 
   /*header section*/

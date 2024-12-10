@@ -336,6 +336,11 @@ a:focus {
   display: flex;
 }
 
+@media screen and (min-width: 769px) {
+  #navbarSupportedContent {
+    display: flex;
+  }
+}
 @media screen and (max-width: 768px) {
   /*header section*/
   .hero_area {
